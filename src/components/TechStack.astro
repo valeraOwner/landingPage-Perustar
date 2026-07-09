@@ -1,0 +1,83 @@
+---
+// TechStack section - Technologies used in the project
+const technologies = [
+  {
+    name: "Kotlin",
+    description: "Lenguaje principal de desarrollo Android",
+    color: "from-violet-500 to-purple-600",
+    icon: `<svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor"><path d="M18.623 0H.29L12 11.761 18.623 0zM0 24l12-12.054L24 24H0z"/></svg>`
+  },
+  {
+    name: "Jetpack Compose",
+    description: "UI declarativa y moderna para Android",
+    color: "from-green-400 to-teal-500",
+    icon: `<svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>`
+  },
+  {
+    name: "Android Studio",
+    description: "Entorno de desarrollo oficial de Android",
+    color: "from-lime-400 to-green-600",
+    icon: `<svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor"><path d="M14.554 7.614c.196.104.386.216.569.336L17.75 5.32 18.68 6.25l-2.628 2.625a7.377 7.377 0 01.948 3.625c0 1.346-.36 2.609-.989 3.697l2.65 2.648-.929.929-2.648-2.648A7.33 7.33 0 0112 19.75a7.33 7.33 0 01-3.684-1.624l-2.648 2.648-.929-.929 2.65-2.648A7.333 7.333 0 016.4 13.5c0-1.347.361-2.611.99-3.698L4.762 7.176l.929-.928 2.627 2.628A7.338 7.338 0 0112 7.5c.883 0 1.728.16 2.509.451l.045.017.045.016-.045-.37zm-2.554-.864a6.15 6.15 0 100 12.3 6.15 6.15 0 000-12.3zm0 2.25a.75.75 0 110 1.5.75.75 0 010-1.5zm0 1.5h-.75V13.5h2.25v-1.5h-.75v-1.5H12zm-.75 3h2.25v1.5h-2.25v-1.5z"/></svg>`
+  },
+  {
+    name: "Room Database",
+    description: "Persistencia local y modo offline",
+    color: "from-orange-400 to-amber-500",
+    icon: `<svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4zM4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4zm0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z"/></svg>`
+  },
+  {
+    name: "Realidad Aumentada",
+    description: "Recorridos virtuales inmersivos con AR",
+    color: "from-cyan-400 to-blue-500",
+    icon: `<svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`
+  },
+  {
+    name: "Vercel",
+    description: "Hosting de la landing page",
+    color: "from-white to-slate-300",
+    icon: `<svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>`
+  }
+];
+---
+
+<section id="tech" class="relative py-24 lg:py-32">
+  <div class="section-divider mb-24"></div>
+
+  <!-- Background -->
+  <div class="glow-orb w-[500px] h-[500px] bg-primary-500 bottom-0 left-1/4"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+      <span class="inline-block text-sm font-semibold text-accent-400 uppercase tracking-widest mb-4">Stack Tecnológico</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
+        Construido con
+        <span class="gradient-text">tecnología moderna</span>
+      </h2>
+      <p class="text-lg text-slate-400 leading-relaxed">
+        Desarrollada en Kotlin con Jetpack Compose para una UI fluida y declarativa, Room para persistencia offline, y AR para una experiencia turística única e inmersiva.
+      </p>
+    </div>
+
+    <!-- Tech Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+      {technologies.map((tech, index) => (
+        <div
+          class="glass-card rounded-2xl p-8 text-center group"
+          style={`animation: slideIn 0.6s ease-out ${index * 0.12}s forwards; opacity: 0;`}
+        >
+          <!-- Icon -->
+          <div class={`w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br ${tech.color} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+            <div class="w-full h-full rounded-2xl bg-surface-900 flex items-center justify-center text-white">
+              <Fragment set:html={tech.icon} />
+            </div>
+          </div>
+
+          <!-- Content -->
+          <h3 class="text-xl font-heading font-semibold text-white mb-2">{tech.name}</h3>
+          <p class="text-slate-400 text-sm">{tech.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

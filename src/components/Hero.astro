@@ -1,0 +1,92 @@
+---
+// Hero section - Main banner with CTA
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+  <!-- Background Orbs -->
+  <div class="glow-orb w-[600px] h-[600px] bg-primary-600 -top-40 -right-40"></div>
+  <div class="glow-orb w-[500px] h-[500px] bg-accent-500 -bottom-40 -left-40"></div>
+  <div class="glow-orb w-[300px] h-[300px] bg-primary-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+  <!-- Grid pattern overlay -->
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxNDgsMTYzLDE4NCwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-60"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left Content -->
+      <div class="space-y-8 text-center lg:text-left" style="animation: fadeInLeft 0.8s ease-out forwards;">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          <span>App Android · Jetpack Compose</span>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold leading-tight tracking-tight">
+          Tu guía turística
+          <span class="shimmer-text">inteligente</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="text-lg sm:text-xl text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Explora museos, eventos y atractivos culturales con fichas completas, mapas, modo offline y recorridos en <strong class="text-white">Realidad Aumentada</strong>. Todo en tu bolsillo.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="#descargar" class="btn-primary px-8 py-4 rounded-2xl text-white font-semibold text-lg inline-flex items-center justify-center gap-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Descargar Ahora
+          </a>
+          <a href="#features" class="btn-secondary px-8 py-4 rounded-2xl text-slate-300 font-semibold text-lg inline-flex items-center justify-center gap-3">
+            Explorar
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex gap-8 justify-center lg:justify-start pt-4">
+          <div class="text-center">
+            <div class="text-2xl sm:text-3xl font-heading font-bold gradient-text">12+</div>
+            <div class="text-sm text-slate-500">Pantallas</div>
+          </div>
+          <div class="w-px bg-slate-700/50"></div>
+          <div class="text-center">
+            <div class="text-2xl sm:text-3xl font-heading font-bold gradient-text">AR</div>
+            <div class="text-sm text-slate-500">Realidad Aumentada</div>
+          </div>
+          <div class="w-px bg-slate-700/50"></div>
+          <div class="text-center">
+            <div class="text-2xl sm:text-3xl font-heading font-bold gradient-text">100%</div>
+            <div class="text-sm text-slate-500">Offline</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right - Hero Image -->
+      <div class="relative flex justify-center" style="animation: fadeInRight 0.8s ease-out forwards;">
+        <div class="relative">
+          <!-- Glow behind image -->
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-500/20 rounded-3xl blur-3xl scale-110"></div>
+          <img
+            src="/portada.png"
+            alt="PeruStar App Preview"
+            class="relative w-full max-w-lg rounded-3xl shadow-2xl shadow-black/40 animate-float"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500">
+    <span class="text-xs uppercase tracking-widest">Scroll</span>
+    <div class="w-6 h-10 rounded-full border-2 border-slate-600 flex justify-center pt-2">
+      <div class="w-1.5 h-3 bg-slate-400 rounded-full animate-bounce"></div>
+    </div>
+  </div>
+</section>

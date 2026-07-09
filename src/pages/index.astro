@@ -1,0 +1,46 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import TechStack from '../components/TechStack.astro';
+import Screenshots from '../components/Screenshots.astro';
+import DownloadCTA from '../components/DownloadCTA.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO -->
+		<title>PeruStar — Descubre el Poder de la Innovación</title>
+		<meta name="description" content="PeruStar es una aplicación moderna y potente que combina rendimiento, seguridad y una interfaz intuitiva. Descarga gratis desde GitHub." />
+		<meta name="keywords" content="PeruStar, app, descarga, software, herramienta, proyecto" />
+		<meta property="og:title" content="PeruStar — Descubre el Poder de la Innovación" />
+		<meta property="og:description" content="Descarga PeruStar gratis. Rendimiento ultra rápido, seguridad avanzada y una interfaz intuitiva." />
+		<meta property="og:image" content="/portada.png" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+	</head>
+	<body class="antialiased">
+		<Navbar />
+		<main>
+			<Hero />
+			<Features />
+			<TechStack />
+			<Screenshots />
+			<DownloadCTA />
+		</main>
+		<Footer />
+	</body>
+</html>
