@@ -180,6 +180,7 @@
   }
 
   .shimmer-text {
+    margin-left: 0.35em;
     background: linear-gradient(
       90deg,
       var(--color-primary-400),
