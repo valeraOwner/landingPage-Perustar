@@ -1,84 +1,87 @@
 ---
-// Screenshots section - App screenshots carousel
+
+// Screenshots section - iPhone Mockup Premium
 const screenshots = [
-  {
-    src: "/screenshots/Gestion2.svg",
-    alt: "Pantalla principal de PeruStar",
-    label: "Dashboard Principal"
-  },
-  {
-    src: "/screenshots/gestion3.svg",
-    alt: "Pantalla de analíticas de PeruStar",
-    label: "Analíticas"
-  },
-  {
-    src: "/screenshots/gestion4.svg",
-    alt: "Pantalla de configuración de PeruStar",
-    label: "Recorrido"
-  }
+{
+src: "/screenshots/Gestion2.svg",
+alt: "Pantalla principal de PeruStar",
+label: "Dashboard Principal"
+},
+{
+src: "/screenshots/gestion3.svg",
+alt: "Pantalla de analíticas de PeruStar",
+label: "Analíticas"
+},
+{
+src: "/screenshots/gestion4.svg",
+alt: "Pantalla de configuración de PeruStar",
+label: "Recorrido"
+}
 ];
----
+--
 
 <section id="screenshots" class="relative py-24 lg:py-32">
   <div class="section-divider mb-24"></div>
 
-  <!-- Background -->
+  <!-- Glow background -->
+
   <div class="glow-orb w-[500px] h-[500px] bg-accent-600 top-1/3 right-0"></div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-      <span class="inline-block text-sm font-semibold text-accent-400 uppercase tracking-widest mb-4">Capturas de Pantalla</span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
-        Mira cómo luce
-        <span class="gradient-text">en acción</span>
-      </h2>
-      <p class="text-lg text-slate-400 leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explora las principales pantallas de nuestra aplicación.
-      </p>
-    </div>
 
-    <!-- Screenshots Gallery -->
-    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-      {screenshots.map((screenshot, index) => (
-        <div
-          class="group relative"
-          style={`animation: fadeInUp 0.8s ease-out ${index * 0.15}s forwards; opacity: 0;`}
-        >
-          <!-- Card -->
-          <div class="glass-card rounded-2xl overflow-hidden">
-            <!-- Image Container -->
-            <div class="relative aspect-[4/3] overflow-hidden">
-              <img
-                src={screenshot.src}
-                alt={screenshot.alt}
-                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-              />
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </div>
+```
+<!-- Header -->
+<div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+  <span class="inline-block text-sm font-semibold text-accent-400 uppercase tracking-widest mb-4">
+    Capturas de Pantalla
+  </span>
+  <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
+    Experiencia tipo
+    <span class="gradient-text">App real</span>
+  </h2>
+  <p class="text-lg text-slate-400 leading-relaxed">
+    Visualiza cómo se ve PeruStar dentro de un dispositivo moderno.
+  </p>
+</div>
 
-            <!-- Label -->
-            <div class="p-5">
-              <div class="flex items-center gap-3">
-                <div class="w-2 h-2 rounded-full bg-gradient-to-r from-primary-400 to-accent-400"></div>
-                <span class="text-sm font-medium text-slate-300">{screenshot.label}</span>
-              </div>
-            </div>
-          </div>
+<!-- Mockups -->
+<div class="grid md:grid-cols-3 gap-10 place-items-center">
+  {screenshots.map((screenshot, index) => (
+    <div
+      class="group relative"
+      style={`animation: fadeInUp 0.8s ease-out ${index * 0.15}s forwards; opacity: 0;`}
+    >
 
-          <!-- Decorative ring on hover -->
-          <div class="absolute -inset-px rounded-2xl bg-gradient-to-r from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/20 group-hover:to-accent-500/20 transition-all duration-500 -z-10 blur-sm"></div>
+      <!-- iPhone Frame -->
+      <div class="relative w-[260px] h-[520px] rounded-[40px] bg-black shadow-2xl border-[6px] border-slate-800 overflow-hidden transition-transform duration-500 group-hover:scale-105">
+
+        <!-- Notch -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[26px] bg-black rounded-b-2xl z-20"></div>
+
+        <!-- Screen -->
+        <div class="absolute inset-0 overflow-hidden rounded-[34px]">
+          <img
+            src={screenshot.src}
+            alt={screenshot.alt}
+            class="w-full h-full object-contain bg-black"
+            loading="lazy"
+          />
         </div>
-      ))}
-    </div>
 
-    <!-- Navigation Dots -->
-    <div class="flex justify-center gap-3 mt-12">
-      {screenshots.map((_, index) => (
-        <div class={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-accent-500 w-8' : 'bg-slate-600 hover:bg-slate-500'}`}></div>
-      ))}
+        <!-- Shine effect -->
+        <div class="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+      </div>
+
+      <!-- Label -->
+      <div class="mt-5 text-center">
+        <span class="text-sm text-slate-300">{screenshot.label}</span>
+      </div>
+
     </div>
+  ))}
+</div>
+```
+
   </div>
 </section>
