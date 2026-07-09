@@ -120,6 +120,7 @@
 /* ===== Utility Classes ===== */
 @layer utilities {
   .gradient-text {
+    margin-left: 0.2em;
     background: linear-gradient(135deg, var(--color-primary-400), var(--color-accent-400));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -180,7 +181,7 @@
   }
 
   .shimmer-text {
-    margin-left: 0.35em;
+    margin-left: 0.2em;
     background: linear-gradient(
       90deg,
       var(--color-primary-400),
